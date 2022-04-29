@@ -4,5 +4,7 @@ ENV TZ=Asia/Tokyo
 
 RUN mkdir /front
 WORKDIR /front
-COPY package.json /front/package.json
-RUN yarn
+
+COPY package.json ./
+RUN yarn install
+COPY . .
