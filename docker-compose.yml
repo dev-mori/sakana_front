@@ -5,8 +5,6 @@ services:
     build: .
     environment:
       - NODE_ENV=development
-    volumes:
-      - .:/front
     command: bash -c 'PORT=3001 yarn start'
     ports:
       - '3001:3001'
