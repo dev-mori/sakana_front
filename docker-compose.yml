@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    environment:
+      - NODE_ENV=development
+    command: bash -c 'PORT=3001 yarn start'
+    ports:
+      - '3001:3001'
